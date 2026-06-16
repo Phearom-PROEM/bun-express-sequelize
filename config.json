@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "root",
+    "password": "លេខសម្ងាត់_database_របស់អ្នក",
+    "database": "ឈ្មោះ_database_របស់អ្នក",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

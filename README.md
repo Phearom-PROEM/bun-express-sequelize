@@ -1,4 +1,5 @@
 Set up project
+
 ```bash
 mkdir bun-express-sequelize
 cd bun-express-sequelize
@@ -19,4 +20,46 @@ To run:
 
 ```bash
 bun run index.ts
+```
+
+<!-- create tbl -->
+
+```sh
+bunx sequelize-cli migration:generate --name create-users
+```
+
+Migreate
+
+```sh
+bunx sequelize-cli db:migrate
+```
+
+Undo the last migration
+
+```sh
+bunx sequelize-cli db:migrate:undo
+```
+
+Undo all migrations
+
+```sh
+bunx sequelize-cli db:migrate:undo:all
+```
+
+Seed DB
+
+```sh
+bunx sequelize-cli db:seed:all
+```
+
+Undo all seeders
+
+```sh
+bunx sequelize-cli db:seed:undo:all
+```
+
+Undo the last seeder
+
+```sh
+bunx sequelize-cli db:seed:undo
 ```
