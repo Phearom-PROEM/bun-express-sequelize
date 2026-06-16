@@ -21,7 +21,7 @@ const startServer = async () => {
     // Connected Database
     await sequelize.authenticate();
     console.log('Connected to db!');
-
+    
     app.listen(PORT, () => {
       console.log(`Server on port: http://localhost:${PORT}`);
     });

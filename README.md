@@ -12,6 +12,10 @@ bun add multer
 bun add -d @types/multer
 
 ```
+Express validor
+```sh
+npm install express-validator
+```
 
 # bun-express-sequelize
 
@@ -29,7 +33,7 @@ bun run index.ts
 ```
 Create DB
 ```sh
-bun src/create-database.ts
+bun src/config/create-database.ts
 ```
 <!-- create tbl -->
 
