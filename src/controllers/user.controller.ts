@@ -28,7 +28,7 @@ export const UserController = {
   },
 
   getAll: async (req: Request, res: Response) => {
-    console.log(await User.findAll());
+    // console.log(await User.findAll());
     try {
       const users = await User.findAll();
       res.json(users);
@@ -41,7 +41,7 @@ export const UserController = {
     try {
       const userId = Number(req.params.id);
       const user = await User.findByPk(userId as any); // ប្រើ 'as any' ដើម្បីជៀសវាងបញ្ហា Type ជាមួយ findByPk
-      if (!user) return res.status(404).json({ message: 'រកមិនឃើញអ្នកប្រើប្រាស់ឡើយ' });
+      if (!user) return res.status(404).json({ message: 'The user is not found' });
       res.json(user);
     } catch (error: any) {
       res.status(500).json({ error: error.message });
