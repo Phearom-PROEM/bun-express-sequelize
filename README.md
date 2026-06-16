@@ -39,6 +39,8 @@ bun src/config/create-database.ts
 
 ```sh
 bunx sequelize-cli migration:generate --name create-users
+
+npx sequelize-cli model:generate --name Student --attributes name:string,email:string,age:integer
 ```
 Init 
 ```sh
