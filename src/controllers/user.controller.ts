@@ -37,7 +37,7 @@ export const UserController = {
       const userId = Number(req.params.id);
       const { username, email } = req.body;
       const user = await User.findByPk(userId as any);
-      
+
       if (!user) return res.status(404).json({ message: 'រកមិនឃើញអ្នកប្រើប្រាស់ឡើយ' });
 
       await user.update({ username, email });
@@ -51,7 +51,7 @@ export const UserController = {
     try {
       const userId = Number(req.params.id);
       const user = await User.findByPk(userId as any);
-      
+
       if (!user) return res.status(404).json({ message: 'រកមិនឃើញអ្នកប្រើប្រាស់ឡើយ' });
 
       await user.destroy();

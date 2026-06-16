@@ -7,7 +7,7 @@ interface UserAttributes {
   email: string;
 }
 
-interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
+interface UserCreationAttributes extends Optional<UserAttributes, 'id'> { }
 
 class User extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {
   public id!: number;

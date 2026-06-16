@@ -6,6 +6,11 @@ cd bun-express-sequelize
 bun init -y
 bun add express sequelize mysql2
 bun add -d @types/express @types/node
+bun add body-parser
+bun add -d @types/body-parser
+bun add multer
+bun add -d @types/multer
+
 ```
 
 # bun-express-sequelize
@@ -14,6 +19,7 @@ To install dependencies:
 
 ```bash
 bun install
+
 ```
 
 To run:
@@ -21,11 +27,18 @@ To run:
 ```bash
 bun run index.ts
 ```
-
+Create DB
+```sh
+bun src/create-database.ts
+```
 <!-- create tbl -->
 
 ```sh
 bunx sequelize-cli migration:generate --name create-users
+```
+Init 
+```sh
+bunx sequelize-cli init
 ```
 
 Migreate
