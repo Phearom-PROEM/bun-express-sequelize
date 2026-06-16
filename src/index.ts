@@ -1,4 +1,6 @@
+
 import express from 'express';
+import bodyParser from 'body-parser';
 import sequelize from './config/database';
 import userRoutes from './routes/user.routes';
 import dotenv from 'dotenv';
@@ -8,8 +10,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true })); //Express can read the from Form (URL Encoded) 
+// 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use('/api', userRoutes);
 
 const startServer = async () => {
